@@ -1,0 +1,49 @@
+
+<!--
+<img id="happy" src="images/happy.png">
+<img id="question" src="images/question.png">
+<img id="thoughtful" src="images/thoughtful.gif">
+-->
+
+<style>
+#top {
+	text-align: center;
+	width: 100%;
+    background-image: url("images/question.png");
+    background-repeat: repeat-x;
+    height: 200px;
+    line-height: 200px;
+    font-size: 36pt;
+}
+.buttonDiv {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+#bottom {
+	text-align: center;
+}
+button {
+    font-size: 18pt;
+    background-color: #ccccd8;
+}
+</style>
+
+<div id="top">How Do You Feel Today?</div>
+
+<div class="buttonDiv"><button onclick="loadimage('images/happy.png')">Happy</button></div>
+<div class="buttonDiv"><button onclick="loadimage('images/thoughtful.gif')">Thoughtful</button></div>
+
+<div id="bottom"><img id="outputImg" src=""></div>
+
+
+<script>
+document.getElementsByTagName('button')[0].style.width = document.getElementsByTagName('button')[1].offsetWidth + 'px';
+
+function loadimage(url) {
+	document.getElementById('outputImg').src = url;
+}
+</script>
+
+
+
